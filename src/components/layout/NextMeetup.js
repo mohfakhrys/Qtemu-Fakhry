@@ -17,9 +17,9 @@ class NextMeetup extends Component {
 
   render() {
     const {nextM0, nextM1, nextM2, nextM3, nextM4,
-          nextM5, nextM6, nextM7, nextM8, nextM9, nextM10}=this.props;
+          nextM5, nextM6, nextM7, nextM8, nextM9, }=this.props;
     const{people}=this.state
-    let filterByHeight = people.length != 0 ?
+    let filterByHeight = people.length !== 0 ?
         people.filter(data=>{
             return data.height >= 150
         })
@@ -46,7 +46,7 @@ class NextMeetup extends Component {
             {nextM9}
             <br/>
             {
-            filterByHeight.length != 0 ?
+            filterByHeight.length !== 0 ?
                 filterByHeight.map(result => {
                     return (
                     <React.Fragment key={result.name}>
